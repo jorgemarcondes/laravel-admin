@@ -498,9 +498,9 @@ class Form
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function update($id)
+    public function update($id, $data = false)
     {
-        $data = Input::all();
+        $data = ($data) ?: Input::all();
 
         $isEditable = $this->isEditable($data);
 
